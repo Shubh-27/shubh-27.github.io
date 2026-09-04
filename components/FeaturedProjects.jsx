@@ -52,7 +52,7 @@ export default function FeaturedProjects({ projects }) {
               <a
                 href={`#/project/${project.id}`}
                 className="btn-details"
-                aria-label={`View technical specifications for ${project.title}`}
+                aria-label={`Inspect Architecture & SQL for ${project.title}`}
               >
                 Inspect Architecture & SQL ↗
               </a>

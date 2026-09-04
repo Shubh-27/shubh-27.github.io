@@ -66,7 +66,6 @@ export default function Contact({ contact }) {
             <a
               href={`mailto:${contact.email}`}
               className="contact-item-main"
-              aria-label="Send email to Shubh Thakkar"
               title="Open in default mail client"
             >
               <span className="contact-action-type">Email:</span>
@@ -90,7 +89,6 @@ export default function Contact({ contact }) {
               target="_blank"
               rel="noopener noreferrer"
               className="contact-item-main"
-              aria-label="Visit Shubh Thakkar on LinkedIn"
               title="Open LinkedIn in new tab"
             >
               <span className="contact-action-type">LinkedIn:</span>
@@ -114,7 +112,6 @@ export default function Contact({ contact }) {
               target="_blank"
               rel="noopener noreferrer"
               className="contact-item-main"
-              aria-label="Visit Shubh Thakkar on GitHub"
               title="Open GitHub in new tab"
             >
               <span className="contact-action-type">GitHub:</span>
