@@ -1,0 +1,47 @@
+export const capabilities = [
+  {
+    id: 'backend-apis',
+    title: 'Backend & APIs',
+    description: 'API architecture, core domain calculation engines, and request pipeline design.',
+    skills: [
+      'C# / .NET 8',
+      'ASP.NET Core Web API',
+      'Entity Framework Core 8',
+      'Dapper',
+      'Dependency Injection Scoping',
+      'Generic Repository & Unit of Work',
+      'Async / Await & Cancellation',
+      'Quartz.NET',
+    ],
+  },
+  {
+    id: 'database-cloud',
+    title: 'Database & Cloud',
+    description: 'Execution plan analysis, high-load query optimization, and serverless Azure infrastructure.',
+    skills: [
+      'SQL Server / Azure SQL',
+      'Execution Plan Analysis (SSMS)',
+      'T-SQL (CTEs & Window Functions)',
+      'Non-Clustered Index Tuning',
+      'Azure App Service',
+      'Azure Durable Functions',
+      'Azure Blob Storage',
+      'Azure Monitor & App Insights',
+    ],
+  },
+  {
+    id: 'fullstack-applied-ai',
+    title: 'Full-Stack & Applied AI',
+    description: 'Modern React/Next.js platforms, practical RAG architectures, and document intelligence.',
+    skills: [
+      'React.js',
+      'Next.js (SSR / SSG)',
+      'TypeScript & ES6+',
+      'Tailwind CSS',
+      'Azure OpenAI & Claude APIs',
+      'Azure AI Search (Hybrid HNSW)',
+      'Document Intelligence (OCR)',
+      'RAG Pipeline Engineering',
+    ],
+  },
+];
