@@ -65,7 +65,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${ibmPlexSans.variable} ${ibmPlexMono.variable}`} suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://shubh-27.github.io/" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <script
           type="application/ld+json"
