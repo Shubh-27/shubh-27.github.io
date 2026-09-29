@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { projects } from '../content/projects';
+import { projects } from '@/content/projects';
 
 export default function ProjectDetailModal() {
   const [project, setProject] = useState(null);

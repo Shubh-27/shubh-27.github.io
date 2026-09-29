@@ -1,5 +1,3 @@
-'use client';
-
 export default function PersonalProject({ project }) {
   if (!project) return null;
 

@@ -1,4 +1,44 @@
+export const baseUrl = 'https://shubh-27.github.io/';
+
+export const siteMetadata = {
+  title: {
+    default: 'Shubh Thakkar — Backend Software Engineer / .NET Developer',
+    template: '%s | Shubh Thakkar',
+  },
+  description:
+    'Portfolio of Shubh Thakkar — Backend Software Engineer specializing in C#, .NET 8, SQL Server query optimization, Azure, and practical AI/RAG architectures.',
+  icons: {
+    icon: '/favicon.svg',
+  },
+  openGraph: {
+    title: 'Shubh Thakkar — Backend Software Engineer / .NET Developer',
+    description:
+      'Backend architecture, financial calculation engines, high-performance SQL optimization, and cloud systems.',
+    url: baseUrl,
+    siteName: 'Shubh Thakkar Portfolio',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://shubh-27.github.io/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Shubh Thakkar, Backend Software Engineer / .NET Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shubh Thakkar — Backend Software Engineer / .NET Developer',
+    description:
+      'Backend architecture, financial calculation engines, high-performance SQL optimization, and cloud systems.',
+    images: ['https://shubh-27.github.io/og-image.png'],
+  },
+};
+
 export const siteContent = {
+  baseUrl,
+  siteMetadata,
   brand: {
     name: 'Shubh Thakkar',
     role: 'Backend Software Engineer / .NET Developer',

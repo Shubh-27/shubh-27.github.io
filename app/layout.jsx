@@ -1,6 +1,7 @@
 import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 import Script from 'next/script';
-import './globals.css';
+import '@/app/globals.css';
+import { baseUrl, siteMetadata } from '@/content/site';
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['latin'],
@@ -17,23 +18,15 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://shubh-27.github.io'),
-  title: 'Shubh Thakkar — Backend Software Engineer / .NET Developer',
-  description:
-    'Portfolio of Shubh Thakkar — Backend Software Engineer specializing in C#, .NET 8, SQL Server query optimization, Azure, and practical AI/RAG architectures.',
+  metadataBase: new URL(baseUrl),
+  title: siteMetadata.title,
+  description: siteMetadata.description,
   alternates: {
-    canonical: '/',
+    canonical: baseUrl,
   },
-  icons: {
-    icon: '/favicon.svg',
-  },
-  openGraph: {
-    title: 'Shubh Thakkar — Backend Software Engineer / .NET Developer',
-    description:
-      'Backend architecture, financial calculation engines, high-performance SQL optimization, and cloud systems.',
-    type: 'website',
-    url: 'https://shubh-27.github.io/',
-  },
+  icons: siteMetadata.icons,
+  openGraph: siteMetadata.openGraph,
+  twitter: siteMetadata.twitter,
 };
 
 export default function RootLayout({ children }) {
@@ -42,7 +35,7 @@ export default function RootLayout({ children }) {
     '@type': 'Person',
     name: 'Shubh Thakkar',
     jobTitle: 'Backend Software Engineer / .NET Developer',
-    url: 'https://shubh-27.github.io/',
+    url: baseUrl,
     sameAs: [
       'https://github.com/Shubh-27',
       'https://linkedin.com/in/shubh-thakkar',
@@ -88,32 +81,37 @@ export default function RootLayout({ children }) {
       <body className={ibmPlexSans.className}>
         {children}
 
-        {/* Google Analytics (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-NVB0CD06KS"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-NVB0CD06KS');
-          `}
-        </Script>
+        {/* Only load analytics & tracking in production to avoid polluting localhost data */}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            {/* Google Analytics (gtag.js) */}
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-NVB0CD06KS"
+              strategy="lazyOnload"
+            />
+            <Script id="google-analytics" strategy="lazyOnload">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-NVB0CD06KS');
+              `}
+            </Script>
 
-        {/* Microsoft Clarity (Cookieless) */}
-        <Script id="microsoft-clarity" strategy="lazyOnload">
-          {`
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                c[a]("consentv2", { ad_Storage: "denied", analytics_Storage: "denied" });
-                c[a]("consent", false);
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "ycy8e8m6i2");
-          `}
-        </Script>
+            {/* Microsoft Clarity (Cookieless) */}
+            <Script id="microsoft-clarity" strategy="lazyOnload">
+              {`
+                (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    c[a]("consentv2", { ad_Storage: "denied", analytics_Storage: "denied" });
+                    c[a]("consent", false);
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "ycy8e8m6i2");
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
