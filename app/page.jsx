@@ -12,12 +12,15 @@ import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
 import BackToTop from '@/components/ui/BackToTop';
 
-import { siteContent } from '@/content/site';
-import { impactStats } from '@/content/impact';
-import { capabilities } from '@/content/skills';
-import { personalProject, featuredProjects } from '@/content/projects';
-import { experienceData } from '@/content/experience';
-import { technicalArticles } from '@/content/articles';
+import {
+  siteContent,
+  impactStats,
+  capabilities,
+  personalProject,
+  featuredProjects,
+  experienceData,
+  technicalArticles,
+} from '@/lib/content';
 
 export default function Home() {
   return (

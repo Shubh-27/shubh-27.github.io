@@ -7,7 +7,7 @@ export default function FeaturedProjects({ projects }) {
         <div>
           <h2>Featured Systems</h2>
           <p className="section-subhead">
-            Core production platforms showcasing backend architecture, high-volume calculation engines, and SQL optimizations.
+            Production platforms covering backend architecture, financial calculation engines, and SQL optimization.
           </p>
         </div>
         <span className="count">4 featured</span>

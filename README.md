@@ -1,4 +1,4 @@
-# Shubh Thakkar — Backend Software Engineer Portfolio
+# Shubh Thakkar | Backend Software Engineer Portfolio
 
 The source code and content for the personal engineering portfolio website of **Shubh Thakkar** ([shubh-27.github.io](https://shubh-27.github.io/)), Backend Software Engineer & .NET Developer.
 
@@ -9,8 +9,8 @@ The site is built with **Next.js (App Router)** as a static export, featuring a 
 ## 🛠️ Tech Stack
 
 - **Framework**: [Next.js 14](https://nextjs.org/) (App Router, JavaScript) configured for static HTML/CSS/JS export (`output: 'export'`)
-- **UI & Styling**: Vanilla CSS design system with CSS custom properties (variables) for theme tokens, fluid typography, and zero runtime CSS overhead
-- **Typography**: Self-hosted Google Fonts (`Inter` and `IBM Plex Mono` via `next/font/google`)
+- **UI & Styling**: Modular CSS design system in `styles/` with CSS custom properties (tokens, base layout, components, and section styles) and zero runtime CSS overhead
+- **Typography**: Self-hosted Google Fonts (`IBM Plex Sans` and `IBM Plex Mono` via `next/font/google`)
 - **SEO & Metadata**: Next.js Metadata API with OpenGraph cards, Twitter preview cards, and Schema.org JSON-LD Person structured data
 - **Analytics**: Google Analytics 4 (gtag) and Microsoft Clarity integrated with privacy-aware loading
 - **Hosting & CI/CD**: GitHub Pages deployed automatically via GitHub Actions (`.github/workflows/deploy.yml`)
@@ -74,16 +74,16 @@ Automated deployment is handled by `.github/workflows/deploy.yml` on every push 
 
 ---
 
-## 📂 Content Architecture
+## 📂 Architecture & Directory Structure
 
-Portfolio content is decoupled from JSX presentation components in the `/content/` directory:
+Built following Clean Architecture and `/codebase-design` principles:
 
-- **`content/site.js`**: Positioning, about narrative, engineering principles, and contact information.
-- **`content/impact.js`**: Evidence-backed engineering metrics (e.g. 90%+ SQL latency reduction, 400+ SaaS tenants).
-- **`content/skills.js`**: Capabilities categorized by backend, architecture, cloud, data, and AI/RAG.
-- **`content/projects.js`**: Detailed breakdowns of featured and personal engineering projects.
-- **`content/experience.js`**: Career progression timeline and technical milestones.
-- **`content/articles.js`**: Technical engineering writeups and deep dives.
+- **`lib/content/`**: Content access seam providing typed repository functions (`getProjectById`, `getFeaturedProjects`, etc.) to isolate UI from raw data.
+- **`lib/hooks/`**: Reusable browser interaction adapters (`useScrollSpy`, `useScrollDirection`, `useClipboard`, `useHashParam`).
+- **`components/ui/`**: Deep, accessible UI primitives (`Modal.jsx`, `ThemeToggle.jsx`, `BackToTop.jsx`).
+- **`components/sections/`**: Presentational domain views assembling sections.
+- **`styles/`**: Modularized CSS design system (`tokens.css`, `base.css`, `components.css`, `sections.css`).
+- **`content/`**: Raw domain records (projects, experience, impact stats, skills, articles, site configuration).
 
 ---
 
@@ -95,6 +95,6 @@ This repository contains the source code, design, and content for my personal po
 
 - All content, layout, design, and source code are protected by copyright and may not be copied, reproduced, distributed, or used to create derivative works without explicit written permission.
 - You are welcome to browse the source code for personal learning and reference; reproducing this design, layout, or content as your own portfolio is strictly prohibited.
-- **Exception**: The personal project **CashBook** featured in this portfolio is an independent open-source project hosted at [github.com/Shubh-27/cashbook](https://github.com/Shubh-27/cashbook), which is licensed under its own separate open-source license (MIT License) — see that repository for its terms.
+- **Exception**: The personal project **CashBook** featured in this portfolio is an independent open-source project hosted at [github.com/Shubh-27/cashbook](https://github.com/Shubh-27/cashbook), which is licensed under its own separate open-source license (MIT License; see that repository for its terms).
 
 For full license terms, please refer to the [LICENSE](LICENSE) file at the root of this repository.

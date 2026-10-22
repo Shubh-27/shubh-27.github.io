@@ -1,7 +1,7 @@
 import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 import Script from 'next/script';
 import '@/app/globals.css';
-import { baseUrl, siteMetadata } from '@/content/site';
+import { baseUrl, siteMetadata } from '@/lib/content';
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['latin'],
@@ -36,6 +36,8 @@ export default function RootLayout({ children }) {
     name: 'Shubh Thakkar',
     jobTitle: 'Backend Software Engineer / .NET Developer',
     url: baseUrl,
+    email: 'mailto:sthakkar2705@gmail.com',
+    image: 'https://shubh-27.github.io/og-image.png',
     sameAs: [
       'https://github.com/Shubh-27',
       'https://linkedin.com/in/shubh-thakkar',

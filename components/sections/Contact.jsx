@@ -1,20 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useClipboard } from '@/lib/hooks';
 
 export default function Contact({ contact }) {
-  const [copiedKey, setCopiedKey] = useState(null);
-
-  const handleCopy = (key, text) => (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (navigator?.clipboard?.writeText) {
-      navigator.clipboard.writeText(text).then(() => {
-        setCopiedKey(key);
-        setTimeout(() => setCopiedKey(null), 2000);
-      }).catch(() => {});
-    }
-  };
+  const { copy, isCopied } = useClipboard(2000);
 
   const copyIcon = (
     <svg
@@ -73,12 +62,12 @@ export default function Contact({ contact }) {
             </a>
             <button
               type="button"
-              className={`contact-copy-btn ${copiedKey === 'email' ? 'copied' : ''}`}
-              onClick={handleCopy('email', contact.email)}
-              aria-label={copiedKey === 'email' ? 'Email copied to clipboard' : 'Copy email address'}
-              title={copiedKey === 'email' ? 'Copied!' : 'Copy email'}
+              className={`contact-copy-btn ${isCopied('email') ? 'copied' : ''}`}
+              onClick={copy('email', contact.email)}
+              aria-label={isCopied('email') ? 'Email copied to clipboard' : 'Copy email address'}
+              title={isCopied('email') ? 'Copied!' : 'Copy email'}
             >
-              {copiedKey === 'email' ? checkIcon : copyIcon}
+              {isCopied('email') ? checkIcon : copyIcon}
             </button>
           </div>
 
@@ -96,12 +85,12 @@ export default function Contact({ contact }) {
             </a>
             <button
               type="button"
-              className={`contact-copy-btn ${copiedKey === 'linkedin' ? 'copied' : ''}`}
-              onClick={handleCopy('linkedin', contact.linkedin)}
-              aria-label={copiedKey === 'linkedin' ? 'LinkedIn URL copied to clipboard' : 'Copy LinkedIn URL'}
-              title={copiedKey === 'linkedin' ? 'Copied!' : 'Copy LinkedIn URL'}
+              className={`contact-copy-btn ${isCopied('linkedin') ? 'copied' : ''}`}
+              onClick={copy('linkedin', contact.linkedin)}
+              aria-label={isCopied('linkedin') ? 'LinkedIn URL copied to clipboard' : 'Copy LinkedIn URL'}
+              title={isCopied('linkedin') ? 'Copied!' : 'Copy LinkedIn URL'}
             >
-              {copiedKey === 'linkedin' ? checkIcon : copyIcon}
+              {isCopied('linkedin') ? checkIcon : copyIcon}
             </button>
           </div>
 
@@ -119,12 +108,12 @@ export default function Contact({ contact }) {
             </a>
             <button
               type="button"
-              className={`contact-copy-btn ${copiedKey === 'github' ? 'copied' : ''}`}
-              onClick={handleCopy('github', contact.github)}
-              aria-label={copiedKey === 'github' ? 'GitHub URL copied to clipboard' : 'Copy GitHub URL'}
-              title={copiedKey === 'github' ? 'Copied!' : 'Copy GitHub URL'}
+              className={`contact-copy-btn ${isCopied('github') ? 'copied' : ''}`}
+              onClick={copy('github', contact.github)}
+              aria-label={isCopied('github') ? 'GitHub URL copied to clipboard' : 'Copy GitHub URL'}
+              title={isCopied('github') ? 'Copied!' : 'Copy GitHub URL'}
             >
-              {copiedKey === 'github' ? checkIcon : copyIcon}
+              {isCopied('github') ? checkIcon : copyIcon}
             </button>
           </div>
 

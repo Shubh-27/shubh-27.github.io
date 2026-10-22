@@ -5,7 +5,7 @@ export default function About({ about }) {
         <div>
           <h2>{about.heading}</h2>
           <p className="section-subhead">
-            Background, technical discipline, and engineering approach to building scalable systems.
+            Background, technical priorities, and how I approach backend engineering.
           </p>
         </div>
         <span className="count">Background</span>

@@ -6,8 +6,8 @@ export const featuredProjects = [
     title: 'Financial Commission Calculation Platform',
     category: 'Financial Services & Backend Architecture',
     filterCategory: 'Finance & SaaS',
-    confidentiality: 'Professional Project — Confidential',
-    domain: 'Financial Services — Calculation & Payment Processing Engine',
+    confidentiality: 'Professional Project (Confidential)',
+    domain: 'Financial Services · Calculation & Payment Processing Engine',
     role: 'API Architecture & Core Calculation Engine Owner',
     period: 'Production Deployment',
     technologies: [
@@ -20,11 +20,11 @@ export const featuredProjects = [
       'Serilog',
     ],
     summary:
-      'Mission-critical financial calculation engine handling multi-tier commission rates, dynamic overrides, split percentages, clawbacks, reserves, and batch payment-run processing.',
+      'Core financial calculation engine handling multi-tier commission rates, dynamic overrides, split percentages, clawbacks, rolling reserves, and batch payrun processing.',
     ownership: [
       'Scaffolded the foundational .NET 8 Web API solution across 5 core projects, establishing dependency injection scoping, repository abstractions, and dual-context data patterns adopted across the engineering team.',
-      'Solely owned and engineered the core financial calculation engine, implementing temporal rate resolution, hierarchical revenue splits, clawback netting, and automated reserve release schedules.',
-      'Engineered external financial statement ETL ingestion pipelines and authored high-performance SQL analytics procedures powering reporting dashboards.',
+      'Solely owned and engineered the core financial calculation engine, implementing time-based rate rules, hierarchical revenue splits, clawback netting, and automated reserve release schedules.',
+      'Engineered external financial statement ETL ingestion pipelines and authored SQL analytics procedures powering reporting dashboards.',
     ],
     architecture:
       'Layered N-tier .NET 8 API with centralized dependency injection and Quartz.NET scheduled processing. Leveraged a dual-context database strategy to bypass ORM hydration overhead on heavy reporting queries by streaming pre-formatted JSON directly from SQL Server.',
@@ -41,8 +41,8 @@ export const featuredProjects = [
     title: 'Multi-Tenant Financial SaaS Platform',
     category: 'SaaS & Cloud Platforms',
     filterCategory: 'Finance & SaaS',
-    confidentiality: 'Professional Project — Confidential',
-    domain: 'Financial SaaS — Multi-Tenant Platform & Billing',
+    confidentiality: 'Professional Project (Confidential)',
+    domain: 'Financial SaaS · Multi-Tenant Platform & Billing',
     role: 'Backend Architecture & Multi-Tenancy Engineer',
     period: 'Production Deployment',
     technologies: [
@@ -75,8 +75,8 @@ export const featuredProjects = [
     title: 'Operations Analytics & Reporting Service',
     category: 'Logistics & High-Performance Data',
     filterCategory: 'Analytics & AI',
-    confidentiality: 'Professional Project — Confidential',
-    domain: 'Operations & Logistics — Fleet Tracking & Activity Analytics',
+    confidentiality: 'Professional Project (Confidential)',
+    domain: 'Operations & Logistics · Fleet Tracking & Activity Analytics',
     role: 'Foundational Scaffolding & SQL Optimization Owner',
     period: 'Production Deployment',
     technologies: [
@@ -108,8 +108,8 @@ export const featuredProjects = [
     title: 'Legal Intelligence & Document Research Platform',
     category: 'Practical AI & Asynchronous Pipelines',
     filterCategory: 'Analytics & AI',
-    confidentiality: 'Professional Project — Confidential',
-    domain: 'Legal Tech & Compliance — Document Intelligence & Grounded Q&A',
+    confidentiality: 'Professional Project (Confidential)',
+    domain: 'Legal Tech & Compliance · Document Intelligence & Grounded Q&A',
     role: 'Sole Backend & AI Pipeline Engineer',
     period: 'Production Deployment',
     technologies: [
@@ -146,12 +146,12 @@ export const featuredProjects = [
 export const personalProject = {
   id: 'cashbook',
   isPersonal: true,
-  title: 'CashBook — Cross-Platform Desktop Financial Manager',
+  title: 'CashBook: Cross-Platform Desktop Financial Manager',
   category: 'Personal / Open Source',
   badge: 'Personal / Open Source',
   githubUrl: 'https://github.com/Shubh-27/cashbook',
   confidentiality: 'Personal / Open Source',
-  domain: 'Desktop Financial Management — Offline Ledger & Subprocess Architecture',
+  domain: 'Desktop Financial Management · Offline Ledger & Subprocess Architecture',
   role: 'Solo Architect & Developer',
   period: 'Open Source · GitHub',
   testMetric: '127 Passing Tests (2s)',
@@ -167,7 +167,7 @@ export const personalProject = {
     'TanStack Table',
   ],
   summary:
-    'Modern, high-performance cross-platform desktop financial application featuring an ASP.NET Core (.NET 10 / C# 13) backend subprocess, React 19 UI, offline SQLite storage, live balance recalculation, and 127 passing automated xUnit/Moq tests.',
+    'Cross-platform desktop personal finance application built with an ASP.NET Core (.NET 10 / C# 13) backend subprocess, React 19 UI, offline SQLite storage, instant balance recalculation, and 127 automated xUnit/Moq tests.',
   highlights: [
     {
       label: 'Subprocess Architecture:',

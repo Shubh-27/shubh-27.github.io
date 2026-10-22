@@ -4,7 +4,7 @@ export const impactStats = [
     title: 'High-Load Query Optimization',
     subtitle: 'Staging load & query benchmark',
     description:
-      'Optimized reporting queries against multi-million-row datasets — previously taking anywhere from several minutes to over an hour, sometimes timing out entirely — down to a consistent 3–4 second response.',
+      'Optimized reporting queries against multi-million-row datasets (previously taking anywhere from several minutes to over an hour, or timing out entirely) down to a consistent 3–4 second response.',
   },
   {
     metric: '500+ Pages',

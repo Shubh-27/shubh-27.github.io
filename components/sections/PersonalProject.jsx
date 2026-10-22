@@ -7,7 +7,7 @@ export default function PersonalProject({ project }) {
         <div>
           <h2>Open Source Engineering</h2>
           <p className="section-subhead">
-            Personal software development showcasing live public source code, cross-platform architecture, and automated testing.
+            Open-source desktop app demonstrating local IPC architecture, offline SQLite storage, and automated testing.
           </p>
         </div>
         <span className="count">public repository</span>

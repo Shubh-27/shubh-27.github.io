@@ -2,16 +2,16 @@ export const baseUrl = 'https://shubh-27.github.io/';
 
 export const siteMetadata = {
   title: {
-    default: 'Shubh Thakkar — Backend Software Engineer / .NET Developer',
+    default: 'Shubh Thakkar | Backend Software Engineer / .NET Developer',
     template: '%s | Shubh Thakkar',
   },
   description:
-    'Portfolio of Shubh Thakkar — Backend Software Engineer specializing in C#, .NET 8, SQL Server query optimization, Azure, and practical AI/RAG architectures.',
+    'Portfolio of Shubh Thakkar, Backend Software Engineer specializing in C#, .NET 8, SQL Server query optimization, Azure, and practical AI/RAG architectures.',
   icons: {
     icon: '/favicon.svg',
   },
   openGraph: {
-    title: 'Shubh Thakkar — Backend Software Engineer / .NET Developer',
+    title: 'Shubh Thakkar | Backend Software Engineer / .NET Developer',
     description:
       'Backend architecture, financial calculation engines, high-performance SQL optimization, and cloud systems.',
     url: baseUrl,
@@ -29,7 +29,7 @@ export const siteMetadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shubh Thakkar — Backend Software Engineer / .NET Developer',
+    title: 'Shubh Thakkar | Backend Software Engineer / .NET Developer',
     description:
       'Backend architecture, financial calculation engines, high-performance SQL optimization, and cloud systems.',
     images: ['https://shubh-27.github.io/og-image.png'],
@@ -48,7 +48,7 @@ export const siteContent = {
     kicker: 'Backend Software Engineer / .NET Developer',
     headline: 'I take backend systems from architecture to production.',
     subheadline:
-      'Around 3.5 years of continuous professional software engineering experience architecting .NET APIs, owning core financial calculation engines, optimizing high-volume SQL Server databases, and building practical cloud & RAG pipelines.',
+      'Backend software engineer with ~3.5 years of experience building .NET APIs, owning core financial calculation engines, optimizing high-volume SQL Server databases, and deploying cloud & RAG pipelines.',
     location: 'Open to Remote / Relocation anywhere in India',
     primaryStack: [
       'C#',
@@ -64,16 +64,16 @@ export const siteContent = {
       secondary: { label: 'Explore Capabilities', href: '#capabilities' },
       linkedin: { label: 'LinkedIn', href: 'https://linkedin.com/in/shubh-thakkar', external: true },
       github: { label: 'GitHub', href: 'https://github.com/Shubh-27', external: true },
-      resume: { label: 'Download Resume', href: 'resume.pdf' },
+      resume: { label: 'Download Resume', href: '/resume.pdf' },
     },
   },
   about: {
     heading: 'Engineering Profile',
     kicker: 'About / Technical Background',
     paragraphs: [
-      'I am a backend-focused software engineer specializing in C#, .NET 8, SQL Server, and Azure. Over ~3.5 years of continuous professional experience, I have progressed from foundational feature implementation to establishing project architectures from scratch across 8+ builds, owning complex calculation domains, and delivering enterprise platforms to production.',
-      'My deepest domain ownership is in financial calculations and SaaS multi-tenancy. I owned the core commission calculation engine end-to-end — implementing time-based rate profile selection, tiered revenue splits, client overrides, deduction clawbacks, indemnity rolling reserves with automated payback schedules, and external statement ETL ingestion. I also authored the underlying high-performance SQL analytics layer powering reporting dashboards.',
-      'SQL performance and database optimization are among my strongest competencies. I regularly profile large datasets, analyze SQL execution plans in SSMS, restructure complex queries into efficient CTEs and indexed joins, and eliminate database bottlenecks. I also have practical hands-on experience building asynchronous serverless RAG pipelines with Azure OpenAI, Azure AI Search, and Azure Durable Functions.',
+      "I specialize in C#, .NET 8, SQL Server, and Azure. Over the past 3.5 years, I've grown from writing day-to-day features to architecting 8+ projects from scratch, owning complex financial calculation logic, and shipping enterprise systems to production.",
+      'Most of my work centers on financial calculations and multi-tenant SaaS. I owned the core commission calculation engine end-to-end: time-based rate profiles, tiered revenue splits, client overrides, clawbacks, rolling reserves with automated payback schedules, and external statement ETL ingestion. I also built the SQL analytics layer behind the reporting dashboards.',
+      "Database performance is a core part of what I do. Rather than guessing, I profile workloads in SSMS, inspect execution plans, restructure heavy queries into CTEs and indexed joins, and eliminate bottlenecks. I've also built asynchronous serverless RAG pipelines using Azure OpenAI, Azure AI Search, and Azure Durable Functions.",
     ],
     principles: [
       {
@@ -105,15 +105,15 @@ export const siteContent = {
   contact: {
     heading: "Let's talk about an engineering role.",
     subtext:
-      'Looking for opportunities where I can contribute to reliable backend architecture, high-performance data systems, and end-to-end product delivery.',
+      'Open to backend and .NET engineering roles focused on reliable architecture, database performance, and building production systems.',
     email: 'sthakkar2705@gmail.com',
     linkedin: 'https://linkedin.com/in/shubh-thakkar',
     github: 'https://github.com/Shubh-27',
-    resumeUrl: 'resume.pdf',
+    resumeUrl: '/resume.pdf',
     location: 'Open to Remote / Relocation anywhere in India',
   },
   footer: {
-    tagline: 'Shubh Thakkar — Backend Software Engineer / .NET Developer',
+    tagline: 'Shubh Thakkar | Backend Software Engineer / .NET Developer',
     note: 'Engineered with Next.js',
   },
 };

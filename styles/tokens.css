@@ -1,0 +1,75 @@
+:root,
+[data-theme="light"] {
+  --paper: #EEF0ED;
+  --paper-raised: #E5E8E2;
+  --ink: #16202A;
+  --ink-soft: #4B5A61;
+  --line: #B9C2BE;
+  --line-soft: #D3D8D2;
+  --accent: #C68A2E;
+  --accent-deep: #764A0B;
+  --teal: #3E6259;
+  --max: 1080px;
+  --header-bg: rgba(238, 240, 237, 0.94);
+  --modal-backdrop: rgba(22, 32, 42, 0.65);
+  --badge-os-bg: rgba(32, 178, 170, 0.12);
+  --badge-os-border: rgba(32, 178, 170, 0.35);
+  --badge-test-bg: rgba(224, 102, 102, 0.1);
+  --badge-test-border: rgba(224, 102, 102, 0.25);
+  --badge-featured-bg: rgba(198, 138, 46, 0.12);
+  --dot-green: #2E7D32;
+  --shadow-dropdown: 0 8px 16px rgba(0, 0, 0, 0.08);
+  --shadow-modal: 0 16px 36px rgba(0, 0, 0, 0.25);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --paper: #0F141A;
+  --paper-raised: #182029;
+  --ink: #E8EEF5;
+  --ink-soft: #9AA6B2;
+  --line: #273442;
+  --line-soft: #1D2631;
+  --accent: #E5A43B;
+  --accent-deep: #F2B852;
+  --teal: #42C2A0;
+  --max: 1080px;
+  --header-bg: rgba(15, 20, 26, 0.94);
+  --modal-backdrop: rgba(0, 0, 0, 0.8);
+  --badge-os-bg: rgba(66, 194, 160, 0.15);
+  --badge-os-border: rgba(66, 194, 160, 0.35);
+  --badge-test-bg: rgba(240, 128, 128, 0.15);
+  --badge-test-border: rgba(240, 128, 128, 0.3);
+  --badge-featured-bg: rgba(229, 164, 59, 0.15);
+  --dot-green: #34D399;
+  --shadow-dropdown: 0 8px 20px rgba(0, 0, 0, 0.45);
+  --shadow-modal: 0 16px 40px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0F141A;
+    --paper-raised: #182029;
+    --ink: #E8EEF5;
+    --ink-soft: #9AA6B2;
+    --line: #273442;
+    --line-soft: #1D2631;
+    --accent: #E5A43B;
+    --accent-deep: #F2B852;
+    --teal: #42C2A0;
+    --max: 1080px;
+    --header-bg: rgba(15, 20, 26, 0.94);
+    --modal-backdrop: rgba(0, 0, 0, 0.8);
+    --badge-os-bg: rgba(66, 194, 160, 0.15);
+    --badge-os-border: rgba(66, 194, 160, 0.35);
+    --badge-test-bg: rgba(240, 128, 128, 0.15);
+    --badge-test-border: rgba(240, 128, 128, 0.3);
+    --badge-featured-bg: rgba(229, 164, 59, 0.15);
+    --dot-green: #34D399;
+    --shadow-dropdown: 0 8px 20px rgba(0, 0, 0, 0.45);
+    --shadow-modal: 0 16px 40px rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+}
+

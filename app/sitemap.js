@@ -1,6 +1,6 @@
 export const dynamic = 'force-static';
 
-import { baseUrl } from '@/content/site';
+import { baseUrl } from '@/lib/content';
 
 export default function sitemap() {
   return [
